@@ -1,0 +1,21 @@
+{% extends "AppCoder/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+
+    <p> Si estas buscando trabajo como encargado, podes dejarnos tus datos y nos comunicaremos con vos.</p>
+    <br>
+    <form action="" method="post">
+      {% csrf_token %}
+      <table>
+        {{miFormulario.as_table}}
+      </table>
+      <input type="submit" ,value="Enviar" />
+    </form>
+    
+    
+    
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "AppCoder/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+    
+    Edificio : {{nombre_fantasia}} 
+    <br>
+    
+    {%for edificio in edificios %}
+        
+        Direccion:
+
+            {{edificio.direccion}}
+            <br>
+        Numero:
+        
+            {{edificio.numero}}
+            <br>
+        
+    {%endfor%}
+    
+
+{%endblock%}

@@ -1,0 +1,23 @@
+{% extends "AppCoder/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+
+    <p>Somos un equipo de mas de 10 personas</p>
+
+    <p>Postulate aca y trabaja con nosotros</p>
+
+    <br />
+    <form action="" method="post">
+      {% csrf_token %}
+      <table>
+        {{miFormulario.as_table}}
+      </table>
+      <input type="submit" ,value="Enviar" />
+    </form>
+    
+    
+
+{% endblock %}

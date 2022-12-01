@@ -1,0 +1,21 @@
+{% extends "AppCoder/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+    Para corroborar que tu edificio se haya cargado correctamente buscalo
+    <br>
+        <br />
+        <form action="/AppCoder/buscar/"     method="get">{% csrf_token %}
+            <table>
+                {{miFormulario.as_table}}
+            </table>
+            <input type="text" name="nombre_fantasia" id="nombre_fantasia">
+
+            <input type="submit" value="Buscar" />
+        </form>
+    
+    
+
+{% endblock %}
