@@ -17,5 +17,7 @@ urlpatterns = [
     path("eliminarEdificio/", views.eliminar_edificio),
     path("edificio/list/", views.EdificioList.as_view(), name='List'),
     path("edificio/create/", views.EdificioCreate.as_view(), name='New'),
-
+    path("edificio/edit/<pk>", views.EdificioEdit.as_view(), name='Edit'),
+    path("edificio/detail/<pk>", views.EdificioDetail.as_view(), name='Detail'),
+    path("edificio/delete/<pk>", views.EdificioDelete.as_view(), name='Delete'),
 ]

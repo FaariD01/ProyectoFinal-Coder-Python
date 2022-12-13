@@ -141,3 +141,19 @@ class EdificioCreate(CreateView):
     model = Edificio
     fields = '__all__'
     success_url = '/AppCoder/edificio/list/'
+
+
+class EdificioEdit(UpdateView):
+    model = Edificio
+    fields = '__all__'
+    success_url = '/AppCoder/edificio/list/'
+
+
+class EdificioDetail(DetailView):
+    model = Edificio
+    template = 'AppCoder/edificio_detail.html'
+
+
+class EdificioDelete(DeleteView):
+    model = Edificio
+    success_url = '/AppCoder/edificio/list/'

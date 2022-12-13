@@ -1,0 +1,21 @@
+{% extends "AppCoder/padre.html" %} 
+
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+      
+        
+Nombre: {{edificio.nombre_fantasia}}
+<br>
+Direccion: {{edificio.direccion}}
+<br>
+Numero: {{edificio.numero}}
+<br>
+Mail de Contacto: {{edificio.mail_contacto}}
+<br>
+<a href="{%url 'List' %}">Regresar</a>
+    
+
+{% endblock %}

@@ -1,0 +1,15 @@
+<!EL TITULO DE ESTE ARCHIVO TIENE QUE SER IGUAL A LA CLASS EN MODEL>
+{% extends "AppCoder/padre.html" %} 
+
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+<form method="post">{% csrf_token %}
+    ¿Estás seguro que deseas borrar el curso "{{ object.nombre }}"?
+    <input type="submit" value="Eliminar"/>
+    
+</form>
+    <a href="{%url 'List' %}">Cancelar </a>
+
+{% endblock %}
