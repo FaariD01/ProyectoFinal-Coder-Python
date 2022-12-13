@@ -1,0 +1,18 @@
+<!EL TITULO DE ESTE ARCHIVO TIENE QUE SER IGUAL A LA CLASS EN MODEL>
+{% extends "AppCoder/padre.html" %} 
+
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+    <br>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+        {{form.as_table}}
+        </table>
+        <input type="submit" value="Enviar" />
+    </form>
+    <br>
+    <a class="navbar-brand" href="{% url 'List' %}">Cancelar</a>
+{% endblock %}

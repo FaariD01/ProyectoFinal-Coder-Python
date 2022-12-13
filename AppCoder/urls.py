@@ -10,8 +10,12 @@ urlpatterns = [
     path('encargados/', views.encargados, name="Encargados"),
     path('encargadoApi/', views.encargadoapi),
     path("busquedaEdificio/", views.buscaredificio, name="BusquedaEdificio"),
-    path("buscar/", views.buscar)
-
-
+    path("buscar/", views.buscar),
+    path("leerEdificio/", views.leer_edificio),
+    path("crearEdificio/", views.crear_edificio),
+    path("editarEdificio/", views.editar_edificio),
+    path("eliminarEdificio/", views.eliminar_edificio),
+    path("edificio/list/", views.EdificioList.as_view(), name='List'),
+    path("edificio/create/", views.EdificioCreate.as_view(), name='New'),
 
 ]

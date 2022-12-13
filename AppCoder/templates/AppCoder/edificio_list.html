@@ -1,0 +1,27 @@
+{% extends "AppCoder/padre.html" %} 
+
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+      
+        <br>
+      <a class="btn btn-primary" href="{% url 'New' %}">Crear Nuevo Edificio</a>
+
+        <ul>
+            {% for edificio in object_list %}
+                <br>
+                <p>{{edificio.nombre_fantasia}}</p>
+                
+                <p>
+                    <a href="">Ver</a>
+                    <a href="">Editar</a>
+                    <a href="">Borrar</a>
+                </p>
+            {% endfor %}
+
+        </ul>
+
+
+{% endblock %}
