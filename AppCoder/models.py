@@ -11,7 +11,7 @@ class Edificio(models.Model):
 
 
 class Encargado(models.Model):
-    nombre = models.CharField(max_length=40)
+    nombre_enc = models.CharField(max_length=40)
     edad = models.IntegerField()
     num_contacto = models.IntegerField()
     mail_contacto = models.CharField(max_length=50)

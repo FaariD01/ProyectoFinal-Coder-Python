@@ -6,10 +6,10 @@
 
 {% block contenidoQueCambia %}
 <form method="post">{% csrf_token %}
-    ¿Estás seguro que deseas borrar el edificio "{{ object.nombre_fantasia }}"?
+    ¿Estás seguro que deseas borrar el integrante "{{ object.nombre }} "?
     <input type="submit" value="Eliminar"/>
     
 </form>
-    <a href="{%url 'List' %}">Cancelar </a>
+    <a href="{%url 'ListTeam' %}">Cancelar </a>
 
 {% endblock %}

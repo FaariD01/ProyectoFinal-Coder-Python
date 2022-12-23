@@ -1,0 +1,23 @@
+{% extends "AppCoder/padre.html" %} 
+
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+      
+        
+Nombre: {{equipo.nombre}}
+<br>
+Apellido: {{equipo.apellido}}
+<br>
+Edad: {{equipo.edad}}
+<br>
+Mail de Contacto: {{equipo.mail_contacto}}
+<br>
+Numero de Contacto: {{equipo.num_contacto}}
+<br>
+<a href="{%url 'ListEnc' %}">Regresar</a>
+    
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %} 
+
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+      
+        <br>
+      <a class="btn btn-primary" href="{% url 'NewEnc' %}">Crear Nuevo Integrante</a>
+
+        <ul>
+            {% for encargado in object_list %}
+                <br>
+                <p>{{encargado.nombre_enc}}</p>
+                
+                <p>
+                    <a href="{% url 'DetailEnc' encargado.id %}">Ver</a>
+                    <a href="{% url 'EditEnc' encargado.id %}">Editar</a>
+                    <a href="{% url 'DeleteEnc' encargado.id %}">Borrar</a>
+                </p>
+            {% endfor %}
+
+            
+
+        </ul>
+    
+
+{% endblock %}

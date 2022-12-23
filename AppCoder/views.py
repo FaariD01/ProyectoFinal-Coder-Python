@@ -157,3 +157,57 @@ class EdificioDetail(DetailView):
 class EdificioDelete(DeleteView):
     model = Edificio
     success_url = '/AppCoder/edificio/list/'
+
+
+class EquipoList(ListView):
+    model = Equipo
+    template = 'AppCoder/equipo_list.html'
+
+
+class EquipoCreate(CreateView):
+    model = Equipo
+    fields = '__all__'
+    success_url = '/AppCoder/equipo/list/'
+
+
+class EquipoEdit(UpdateView):
+    model = Equipo
+    fields = '__all__'
+    success_url = '/AppCoder/equipo/list/'
+
+
+class EquipoDetail(DetailView):
+    model = Equipo
+    template = 'AppCoder/equipo_detail.html'
+
+
+class EquipoDelete(DeleteView):
+    model = Equipo
+    success_url = '/AppCoder/equipo/list/'
+
+
+class EncargadoList(ListView):
+    model = Encargado
+    template = 'AppCoder/encargado_list.html'
+
+
+class EncargadoCreate(CreateView):
+    model = Encargado
+    fields = '__all__'
+    success_url = '/AppCoder/encargado/list/'
+
+
+class EncargadoEdit(UpdateView):
+    model = Encargado
+    fields = '__all__'
+    success_url = '/AppCoder/encargado/list/'
+
+
+class EncargadoDetail(DetailView):
+    model = Encargado
+    template = 'AppCoder/encargado_detail.html'
+
+
+class EncargadoDelete(DeleteView):
+    model = Encargado
+    success_url = '/AppCoder/encargado/list/'

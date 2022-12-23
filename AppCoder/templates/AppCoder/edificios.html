@@ -18,8 +18,13 @@
       <input type="submit" ,value="Enviar" />
     </form>
     <br>
+
+    <p>Podes buscar tu edificio</p>
+    <a class="btn btn-primary" href="{% url 'BusquedaEdificio' %}">Buscar Edificio</a>
+    <br>
+    <p>Tambien podes ver el listado con nuestros edificios a cargo</p>
     <a class="btn btn-primary" href="{% url 'List' %}">Listado de Edificios</a>
     
-    
+   
 
 {% endblock %}
