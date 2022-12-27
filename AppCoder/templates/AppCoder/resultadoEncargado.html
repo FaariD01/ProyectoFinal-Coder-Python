@@ -1,0 +1,27 @@
+{% extends "AppCoder/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+    El postulante a encargado es:
+    <br>
+    Edificio : {{nombre_enc}} 
+    <br>
+    {%for encargado in edad%}
+        
+        Edad:
+
+            {{encargado.edad}}
+            <br>
+        Numero de Contacto:
+        
+            {{encargado.num_contacto}}
+            <br>
+        Mail de contacto:
+            {{encargado.mail_contacto}}
+            
+    {%endfor%}
+    
+
+{%endblock%}

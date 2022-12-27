@@ -1,0 +1,30 @@
+{% extends "AppCoder/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+    
+    Integrante : {{nombre}} 
+    <br>
+    
+    {%for equipo in apellido%}
+        
+        Apellido:
+
+            {{equipo.apellido}}
+            <br>
+        Edad:
+        
+            {{equipo.edad}}
+            <br>
+        Numero de contacto:
+            {{equipo.num_contacto}}
+            <br>
+        Mail de Contacto:
+            {{equipo.mail_contacto}}
+            
+    {%endfor%}
+    
+
+{%endblock%}

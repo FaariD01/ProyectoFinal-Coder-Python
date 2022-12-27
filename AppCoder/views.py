@@ -97,7 +97,7 @@ def buscar(request):
     nombre_views = request.GET['nombre_fantasia']
     direccion_views = Edificio.objects.filter(nombre_fantasia=nombre_views)
     numero_views = Edificio.objects.filter(nombre_fantasia=nombre_views)
-    return render(request, 'AppCoder/resultadoEdificio.html', {"nombre_fantasia": nombre_views, "direccion": direccion_views, "numero": numero_views})
+    return render(request, 'AppCoder/resultadoEdificio.html', {'nombre_fantasia': nombre_views, 'direccion': direccion_views, 'numero': numero_views})
 
 
 def buscaredificio(request):
@@ -211,3 +211,28 @@ class EncargadoDetail(DetailView):
 class EncargadoDelete(DeleteView):
     model = Encargado
     success_url = '/AppCoder/encargado/list/'
+
+
+def buscarequi(request):
+    nombre_views = request.GET['nombre']
+    apellido_views = Equipo.objects.filter(nombre=nombre_views)
+    edad_views = Equipo.objects.filter(nombre=nombre_views)
+    num_contacto_views = Equipo.objects.filter(nombre=nombre_views)
+    mail_contacto_views = Equipo.objects.filter(nombre=nombre_views)
+    return render(request, 'AppCoder/resultadoEquipo.html', {"nombre": nombre_views, "apellido": apellido_views, "edad": edad_views, "num_contacto": num_contacto_views, "mail_contacto": mail_contacto_views})
+
+
+def buscarEquipo(request):
+    return render(request, 'AppCoder/busquedaEquipo.html')
+
+
+def buscarenc(request):
+    nombre_views = request.GET['nombre_enc']
+    edad_views = Encargado.objects.filter(nombre_enc=nombre_views)
+    num_contacto_views = Encargado.objects.filter(nombre_enc=nombre_views)
+    mail_contacto_views = Encargado.objects.filter(nombre_enc=nombre_views)
+    return render(request, 'AppCoder/resultadoEncargado.html', {"nombre_enc": nombre_views, "edad": edad_views, "num_contacto": num_contacto_views, "mail_contacto": mail_contacto_views})
+
+
+def buscarEncargado(request):
+    return render(request, 'AppCoder/busquedaEncargado.html')

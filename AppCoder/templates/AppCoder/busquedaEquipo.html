@@ -4,18 +4,18 @@
 
 {% block contenidoQueCambia %}
 
-    Para corroborar que tu edificio se haya cargado correctamente buscalo
+    Para corroborar que tu peticion se haya cargado correctamente, buscala:
     <br>
         <br />
-        <form action="/AppCoder/buscar/"     method="get">{% csrf_token %}
+        <form action="/AppCoder/buscarequi/"     method="get">{% csrf_token %}
             <table>
                 {{miFormulario.as_table}}
             </table>
-            <input type="text" name="nombre_fantasia" id="nombre_fantasia">
+            <input type="text" name="nombre" id="nombre">
 
             <input type="submit" value="Buscar" />
         </form>
     
-        <a href="{%url 'Edificios' %}">Regresar</a>
+        <a href="{%url 'Equipo' %}">Regresar</a>
 
 {% endblock %}

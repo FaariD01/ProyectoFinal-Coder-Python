@@ -30,4 +30,8 @@ urlpatterns = [
     path("encargado/edit/<pk>", views.EncargadoEdit.as_view(), name='EditEnc'),
     path("encargado/detail/<pk>", views.EncargadoDetail.as_view(), name='DetailEnc'),
     path("encargado/delete/<pk>", views.EncargadoDelete.as_view(), name='DeleteEnc'),
+    path("busquedaEquipo/", views.buscarEquipo, name="BusquedaEquipo"),
+    path("buscarequi/", views.buscarequi),
+    path("busquedaEncargado/", views.buscarEncargado, name="BusquedaEncargado"),
+    path("buscarenc/", views.buscarenc),
 ]
