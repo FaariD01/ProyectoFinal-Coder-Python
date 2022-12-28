@@ -17,10 +17,6 @@ class Encargado(models.Model):
     mail_contacto = models.CharField(max_length=50)
 
 
-class Expensa(models.Model):
-    importe = models.IntegerField()
-
-
 class Equipo(models.Model):
     nombre = models.CharField(max_length=40)
     apellido = models.CharField(max_length=40)

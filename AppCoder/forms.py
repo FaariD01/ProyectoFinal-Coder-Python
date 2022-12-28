@@ -17,7 +17,7 @@ class EquipoFormulario(forms.Form):
 
 
 class EncargadoFormulario(forms.Form):
-    nombre = forms.CharField()
+    nombre_enc = forms.CharField()
     edad = forms.IntegerField()
     num_contacto = forms.IntegerField()
     mail_contacto = forms.CharField()

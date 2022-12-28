@@ -84,7 +84,7 @@ def encargados(request):
         if miFormulario.is_valid:
             informacion = miFormulario.cleaned_data
             encargado = Encargado(
-                nombre=informacion["nombre"], edad=informacion["edad"], num_contacto=informacion['num_contacto'], mail_contacto=informacion['mail_contacto'])
+                nombre_enc=informacion["nombre_enc"], edad=informacion["edad"], num_contacto=informacion['num_contacto'], mail_contacto=informacion['mail_contacto'])
             encargado.save()
             return render(request, "AppCoder/inicio.html")
     else:
